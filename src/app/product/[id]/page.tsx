@@ -5,10 +5,10 @@ type Props = {
   params: { id: string };
 };
 
-async function PoductPage({ params }: Props) {
-  const { id } = await params;
+function ProductPage({ params }: Props) {
+  const { id } = params;
 
   return <ProductPageTemplate productId={id} />;
 }
 
-export default PoductPage;
+export default ProductPage;
