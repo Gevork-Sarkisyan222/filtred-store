@@ -7,15 +7,47 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #fafafa;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.icon:hover {
+  color: #6b7068;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.multi-range-slider .labels {
+  display: none !important;
+}
+
+.multi-range-slider .ruler {
+  display: none !important;
+}
+
+.multi-range-slider .bar-inner {
+  background-color: #0166fd !important;
+}
+
+.multi-range-slider {
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
 }
