@@ -3,6 +3,7 @@
 import Header from '@/components/header';
 import axios from 'axios';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 
 interface ProductDetails {
@@ -18,11 +19,11 @@ interface ProductDetails {
   images: string[];
 }
 
-interface ProductPageTemplateProps {
-  productId: string;
-}
+interface ProductPageTemplateProps {}
 
-const ProductPageTemplate: React.FC<ProductPageTemplateProps> = ({ productId }) => {
+const ProductPageTemplate: React.FC<ProductPageTemplateProps> = ({}) => {
+  const params = useParams();
+  const productId = params.id as string;
   const [productDetails, setProductDetails] = useState<ProductDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [imageLoading, setImageLoading] = useState(true);

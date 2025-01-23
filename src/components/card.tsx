@@ -80,19 +80,19 @@ function Card({
   return (
     <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
       <div className="h-56 w-full">
-        <a href={`/product/${id}`}>
+        <Link href={`/product/${id}`}>
           <img className="mx-auto h-full dark:hidden" src={thumbnail} alt={title} />
-        </a>
+        </Link>
       </div>
       <div className="pt-6">
         <span className="rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300">
           {`Up to ${discountPercentage}% off`}
         </span>
-        <a
+        <Link
           href={`/product/${id}`}
           className="block mt-4 text-lg font-semibold leading-tight text-gray-900 hover:underline dark:text-white">
           {title}
-        </a>
+        </Link>
         <p className="text-sm text-gray-500 dark:text-gray-400">{description}</p>
 
         {/* Рейтинг */}
